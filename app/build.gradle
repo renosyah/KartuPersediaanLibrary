@@ -39,6 +39,7 @@ dependencies {
 
     implementation 'com.github.renosyah:Invoice-Maker-Library:1.0.0'
     implementation 'com.github.renosyah:PDF-Viewer-Library:1.0.0'
+    implementation 'com.github.renosyah:Kartu-Persediaan-Library:1.0.0'
 
-    implementation project(path: ':kartupersediaanmodul')
+    //implementation project(path: ':kartupersediaanmodul')
 }

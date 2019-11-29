@@ -1,5 +1,44 @@
 # Android Library : Kartu Persediaan
 
+## Overview
+
+- Report , transaction, and product menu
+
+![GitHub Logo](/img/report.jpg)   ![GitHub Logo](/img/trans.jpg)   ![GitHub Logo](/img/prod.jpg)
+
+
+- Report in PDF with method : FIFO, LIFO and AVERAGE
+
+![GitHub Logo](/img/fifo.jpg)   ![GitHub Logo](/img/lifo.jpg)   ![GitHub Logo](/img/avg.jpg)
+ 
+
+## instalation : 
+
+- add to build.gradle :
+```
+
+	allprojects {
+    		repositories {
+        		maven { url "https://dl.bintray.com/renosyah/maven" }
+        		...
+       			...
+    		}
+	}
+
+```
+
+
+- add to app.gradle :
+```
+
+	dependencies {
+    		...	
+    		implementation 'com.github.renosyah:Kartu-Persediaan-Library:1.0.0'
+	}
+
+```
+
+ 
  
  
 ## how to use
@@ -33,6 +72,7 @@ first of all, you need 3 parameter to generate your report : method,products, an
             
 
 ``` 
+
 
 ## other library use in this example
 
