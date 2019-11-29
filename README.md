@@ -1,5 +1,7 @@
 # Android Library : Kartu Persediaan
 
+This library is a modular version created based on a mobile based inventory card application
+
 ## Overview
 
 - Report , transaction, and product menu
