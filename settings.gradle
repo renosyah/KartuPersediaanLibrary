@@ -1,0 +1,2 @@
+include ':app', ':kartupersediaanmodul'
+rootProject.name='KartuPersediaanLibrary'

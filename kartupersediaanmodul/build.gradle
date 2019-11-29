@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'Kartu-Persediaan-Library'
+
+    publishedGroupId = 'com.github.renosyah'
+    libraryName = 'kartupersediaanmodul'
+    artifact = 'Kartu-Persediaan-Library'
+    libraryDescription = 'library of kartu persediaan'
+
+    siteUrl = 'https://github.com/renosyah/KartuPersediaanLibrary'
+    gitUrl = 'https://github.com/renosyah/KartuPersediaanLibrary.git'
+    githubRepository = 'renosyah/KartuPersediaanLibrary'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'renosyah'
+    developerName = 'reno syahputra'
+    developerEmail = 'syahputrareno975@gmail.com'
+
+    licenseName = 'The Apache License'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ['Apache-2.0']
+
+}
+
+
+apply from: rootProject.file('release-bintray.gradle')
