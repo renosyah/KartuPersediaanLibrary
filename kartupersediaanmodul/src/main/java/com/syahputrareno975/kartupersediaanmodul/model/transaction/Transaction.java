@@ -1,14 +1,26 @@
 package com.syahputrareno975.kartupersediaanmodul.model.transaction;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Comparator;
 
 public class Transaction implements Serializable {
+
+    @SerializedName("id")
     public String Id = "";
+
+    @SerializedName("transaction_date")
     public TransactionDate DateTransaction = new TransactionDate();
+
+    @SerializedName("description")
     public String Description = "";
+
+    @SerializedName("transaction_details")
     public ArrayList<TransactionDetail> TransactionDetails = new ArrayList<>();
+
+    @SerializedName("flow")
     public int Flow = TRANSACTION_PRODUCT_IN;
 
     public static final int TRANSACTION_PRODUCT_IN = 0;

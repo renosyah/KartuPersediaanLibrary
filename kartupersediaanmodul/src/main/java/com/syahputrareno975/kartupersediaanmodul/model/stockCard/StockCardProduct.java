@@ -1,5 +1,6 @@
 package com.syahputrareno975.kartupersediaanmodul.model.stockCard;
 
+import com.google.gson.annotations.SerializedName;
 import com.syahputrareno975.kartupersediaanmodul.model.transaction.TransactionDate;
 
 import java.io.Serializable;
@@ -12,12 +13,26 @@ import static com.syahputrareno975.kartupersediaanmodul.model.MethodStockCard.ME
 import static com.syahputrareno975.kartupersediaanmodul.model.transaction.Transaction.TRANSACTION_PRODUCT_IN;
 
 public class StockCardProduct implements Serializable {
+
+    @SerializedName("id")
     public String Id = "";
+
+    @SerializedName("flow")
     public int Flow = TRANSACTION_PRODUCT_IN;
+
+    @SerializedName("description")
     public String Description = "";
+
+    @SerializedName("date_transaction")
     public TransactionDate DateTransaction = new TransactionDate();
+
+    @SerializedName("product_in")
     public ArrayList<StockCardDetail> ProductIn = new ArrayList<>();
+
+    @SerializedName("product_out")
     public ArrayList<StockCardDetail> ProductOut = new ArrayList<>();
+
+    @SerializedName("product_stock")
     public ArrayList<StockCardDetail> ProductStock = new ArrayList<>();
 
     public StockCardProduct() {

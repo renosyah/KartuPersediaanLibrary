@@ -43,9 +43,10 @@ This library is a modular version created based on a mobile based inventory card
  
  
  
-## how to use
+## How to use
 
-first of all, you need 3 parameter to generate your report : method,products, and transaction
+first of all, you need 3 parameter to generate your report : 
+`method`, `products`, and `transactions`
  
 ```
 
@@ -75,6 +76,17 @@ first of all, you need 3 parameter to generate your report : method,products, an
 
 ``` 
 
+## Make PDF Report
+
+to Make Report into PDF you need to use library `invoice maker` and create model with body like this you can use static function `ToHtml.toHtml(...)` to create HTML file
+
+```
+class PrintKartuPersediaan(val items : ArrayList<StockCard>) : TransactionDataInterface {
+    override fun toHTML(): String {
+        return ToHtml.toHtml(items)
+    }
+}
+```
 
 ## other library use in this example
 

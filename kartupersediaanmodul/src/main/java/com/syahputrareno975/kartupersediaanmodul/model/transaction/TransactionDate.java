@@ -1,5 +1,7 @@
 package com.syahputrareno975.kartupersediaanmodul.model.transaction;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -7,12 +9,23 @@ import java.util.Date;
 
 public class TransactionDate implements Serializable {
 
+    @SerializedName("second")
     public int Second = 0;
+
+    @SerializedName("minute")
     public int Minute= 0;
+
+    @SerializedName("hour")
     public int Hour= 0;
 
+
+    @SerializedName("day")
     public int Day = 0;
+
+    @SerializedName("month")
     public int Month = 0;
+
+    @SerializedName("year")
     public int Year = 0;
 
     public TransactionDate() {

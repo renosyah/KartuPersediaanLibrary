@@ -267,6 +267,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun setListAdapterProduct(){
+
+        productFilter.clear()
+        productFilter.addAll(kartuPersediaanData.Products)
+
         val adapter = AdapterProduct(context,kartuPersediaanData.Products) {adapter,product,pos ->
 
             DialogAddAndEditProduct(context,product) {
